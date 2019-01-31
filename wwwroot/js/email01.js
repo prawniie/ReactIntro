@@ -1,19 +1,53 @@
 ﻿let root = document.getElementById("root");
 
-class Email extends React.Component {
+class Textruta extends React.Component {
 
     render() {
         return (
-            <div>
-                <form>
-                    Förnamn: <input></input>
-                    Efternamn: <input></input>
-                    Email: <input></input>
-                </form>
-            </div>
+                <div className="textwrap">
+                    <label>{this.props.label}</label>
+                    <input/>
+                </div>
             )
     }
-
 }
 
-ReactDOM.render(<Email />, root);
+class App extends React.Component {
+    render() {
+        return (
+            <div>
+                <Textruta label="Förnamn"/>
+                <Textruta label="Efternamn"/>
+                <Textruta label="Email"/>
+                </div>
+            )
+    }
+}
+
+ReactDOM.render(<App />, root);
+
+//class Email extends React.Component {
+
+//    render() {
+//        return (
+//            <div>
+//                <div className="textwrap">
+//                    <label>Förnamn</label>
+//                    <input />
+//                </div>
+
+//                <div className="textwrap">
+//                    <label>Efternamn</label>
+//                    <input />
+//                </div>
+
+//                <div className="textwrap">
+//                    <label>Email</label>
+//                    <input />
+//                </div>
+
+//            </div>
+//        )
+//    }
+
+//}

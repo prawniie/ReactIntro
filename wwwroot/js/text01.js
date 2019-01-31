@@ -10,6 +10,7 @@ class Input extends React.Component {
 
     render() {
 
+        //Magnus lösning: har valideringen inuti return, så beroende på om värdet är 0 så får en paragraph värdet "" eller "nothing here", mha ? xx:xx
         if (this.state.name == "") {
             return (
                 <div>
